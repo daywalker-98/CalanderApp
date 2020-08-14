@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Work Day Scheduler</title>
+    <style>
+      .form-control
+      {
+        background-color:grey;
+        color: white;
+      }
+      .future
+      {
+        background-color:blue;
+        color: white;
+      }
+      .present
+      {
+        background-color:green;
+        color: white;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <div class="row">
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">00:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="0hundredHours"></textarea>
+        <button id="button0"></button>
+      </div>
+      
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">01:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="1hundredHours"></textarea>
+        <button id="button1"></button>
+      </div>
+      
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">02:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="2hundredHours"></textarea>
+        <button id="button2"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">03:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="3hundredHours"></textarea>
+        <button id="button3"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">04:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="4hundredHours"></textarea>
+        <button id="button4"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">05:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="5hundredHours"></textarea>
+        <button id="button5"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">06:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="6hundredHours"></textarea>
+        <button id="button6"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">07:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="7hundredHours"></textarea>
+        <button id="button7"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">08:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="8hundredHours"></textarea>
+        <button id="button8"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">09:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="9hundredHours"></textarea>
+        <button id="button9"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">10:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="10hundredHours"></textarea>
+        <button id="button10"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">11:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="11hundredHours"></textarea>
+        <button id="button11"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">12:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="12hundredHours"></textarea>
+        <button id="button12"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">13:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="13hundredHours"></textarea>
+        <button id="button13"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">14:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="14hundredHours"></textarea>
+        <button id="button14"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">15:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="15hundredHours"></textarea>
+        <button id="button15"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">16:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="16hundredHours"></textarea>
+        <button id="button16"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">17:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="17hundredHours"></textarea>
+        <button id="button17"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">18:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="18hundredHours"></textarea>
+        <button id="button18"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">19:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="19hundredHours"></textarea>
+        <button id="button19"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">20:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="20hundredHours"></textarea>
+        <button id="button20"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">21:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="21hundredHours"></textarea>
+        <button id="button21"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">22:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="22hundredHours"></textarea>
+        <button id="button22"></button>
+      </div>
+    
+      <div class="input-group hour-container">
+        
+          <button class="input-group-text" aria-label="checkbox for following text input">23:00</button>
+        
+        <textarea class="form-control" aria-label="With textarea" id="23hundredHours"></textarea>
+        <button id="button23"></button>
+      </div>
+    </div>
+
+    </div>
+     
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+    <script>moment().format();</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      var $currentDay = document.getElementById("currentDay");
+      for(i=0; i<24; i++)
+      {
+          let $textArea = $(`#${i}hundredHours`);
+          $textArea.val(localStorage.getItem(`itineraryItem${i}`));
+      }
+      for(i=0; i<24; i++)
+      {
+        let $textArea = $(`#${i}hundredHours`);
+        let $prepend = $("form-control");
+        $prepend.attr("class", "col-10");
+        let $timeDisplay = $(".input-group-text");
+        var save = $textArea.val();
+        let $button = $(`#button${i}`);
+        $button.attr("class", "btn-info saveBtn col-1");
+        $button.text("Save");
+        if(save != "")
+        {
+          $button.text("Clear");
+        }
+        $timeDisplay.attr("class", "col-1");
+        let j = i;
+        $button.on("click", function()
+        {
+          var Sbutton = $button;
+          var save = $textArea.val();
+          if (save == localStorage.getItem(`itineraryItem${j}`))
+          {
+            localStorage.removeItem(`itineraryItem${j}`);
+            alert("Event removed");
+            Sbutton.text("Save");
+            $textArea.val("");
+          }
+          else if(save)
+          {
+            alert("Event saved");
+            localStorage.setItem(`itineraryItem${j}`, save);
+            Sbutton.text("Clear");
+          }
+          else
+          {
+            alert("Time slot cleared");
+            localStorage.setItem(`itineraryItem${j}`, save);
+            Sbutton.text("Clear");
+          }
+        });
+      }
+      setInterval(function()
+      { 
+        let now = new Date();
+        $currentDay.textContent = now;
+        var hour = now.getHours();
+        for(i=0; i<24; i++)
+        {
+          var $setHourColor = $(`#${i}hundredHours`);
+          if(i < hour)
+          {
+            $setHourColor.attr("class", "form-control col-10");
+          }
+          else if (i > hour)
+          {
+            $setHourColor.attr("class", "future form-control col-10");
+          }
+          else if (i == hour)
+          {
+            $setHourColor.attr("class", "present form-control col-10");
+          }
+        }
+      }, 100);
+
+    </script>
+  </body>
+</html>
